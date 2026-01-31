@@ -16,8 +16,8 @@
 
 ```mermaid
 graph TD
-    Client[📧 External User] --> CF[🛡️ Cloudflare DNS]
-    CF --> VPS[☁️ Oracle VPS (Public Gateway)]
-    VPS -- "Tailscale Tunnel" --> MiniPC[🏠 Home Mini PC]
-    MiniPC -- "SMTP Relay (Port 587)" --> Brevo[🚀 Brevo]
-    Brevo --> Destination[📬 Recipient Inbox]
+    Client["📧 External User"] --> CF["🛡️ Cloudflare DNS"]
+    CF --> VPS["☁️ Oracle VPS (Public Gateway)"]
+    VPS -- "Tailscale Tunnel" --> MiniPC["🏠 Home Mini PC"]
+    MiniPC -- "SMTP Relay (Port 587)" --> Brevo["🚀 Brevo"]
+    Brevo --> Destination["📬 Recipient Inbox"]
