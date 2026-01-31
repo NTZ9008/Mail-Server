@@ -24,25 +24,25 @@ The architecture uses a **Bi-directional Proxy** design, separating inbound and 
 
 ```mermaid
 graph TD
-    Sender((📩 External Sender))
-    User((📱 Me/Client App))
-    Recipient((📬 Recipient Inbox))
+    Sender["External Sender"]
+    User["Me / Client App"]
+    Recipient["Recipient Inbox"]
 
-    subgraph Cloud [☁️ Oracle Cloud VPS (Gateway)]
-        Firewall[🔥 Cloud Firewall]
-        Nginx[⚙️ Nginx Stream Proxy]
+    subgraph Cloud_Gateway
+        Firewall["Cloud Firewall"]
+        Nginx["Nginx Stream Proxy"]
     end
 
-    subgraph Tunnel [🔒 Tailscale VPN]
-        Link[<== Encrypted WireGuard Tunnel ==>]
+    subgraph Tailscale_Tunnel
+        Link["Encrypted WireGuard Tunnel"]
     end
 
-    subgraph Home [🏠 Home Mini PC]
-        Postfix[📮 Postfix / Mailcow]
-        Dovecot[📂 Dovecot (IMAP)]
+    subgraph Home_Server
+        Postfix["Postfix / Mailcow"]
+        Dovecot["Dovecot (IMAP)"]
     end
 
-    Brevo[🚀 Brevo SMTP Relay]
+    Brevo["Brevo SMTP Relay"]
 
     Sender -- "SMTP (25)" --> Firewall
     Firewall --> Nginx
@@ -56,6 +56,7 @@ graph TD
 
     Postfix -- "Smart Relay" --> Brevo
     Brevo -- "Clean IP Delivery" --> Recipient
+
 ```
 
 ---
