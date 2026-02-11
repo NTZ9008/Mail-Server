@@ -1,12 +1,12 @@
-# 📧 Ultimate Home Lab Mail Server (Hybrid Cloud–Premise)
+# Ultimate Home Lab Mail Server (Hybrid Cloud–Premise)
 
-> Transforming a residential Mini PC into an enterprise-grade mail server — bypassing ISP restrictions via secure cloud tunneling.
+> Transforming a residential PC Server into an enterprise-grade mail server — bypassing ISP restrictions via secure cloud tunneling.
 
 ---
 
-## 📖 Overview
+## Overview
 
-This project demonstrates how to deploy a fully functional **Self-Hosted Mail Server (Mailcow)** on residential hardware (Mini PC) despite common ISP limitations such as:
+This project demonstrates how to deploy a fully functional **Self-Hosted Mail Server (Mailcow)** on residential hardware (PC Server) despite common ISP limitations such as:
 
 - No Public IP (CGNAT)
 - Dynamic IP address
